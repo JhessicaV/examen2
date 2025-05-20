@@ -28,4 +28,11 @@ public class Docente extends Persona {
      */
     @OneToMany(mappedBy = "docente", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<EvaluacionDocente> evaluaciones; // Lista de evaluaciones asociadas al docente
+
+    /*
+     * ASOCIONAL PARA EL INCISO C
+     */
+    @OneToMany(mappedBy = "docente")
+    private List<Materia> materiasDictadas;
+
 }
